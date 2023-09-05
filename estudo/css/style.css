@@ -1,35 +1,31 @@
 html {
     font-size: 16px; 
     font-family: "Roboto";
-    background-image: url("../imagens/wpp-computer-coding.gif");
-    background-position: center;
+    /* background-color: rgb(0, 0, 0); */
+    background-image: url("../imagens/background-geometric.webp");
+    /* background-position: repeat; */
     background-size: cover;
     line-height: 2;
 }
 
 body {
     width: 650px;
-    margin: 0 auto;
-    background-color: #9ea6ac;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #000000;
     padding: 20px 20px 20px 20px;
-    border: 5px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 50px white;
   }
 
-h1 {
-    font-size: 60px;
-    text-align: center;
-    margin: 0;
-    color: #00539f;
-    text-shadow: 3px 3px 1px black;
-  }
-  
-main {
+:is(main, main p) {
   margin: 0px 25px 25px 0px;
   text-align: justify;
-}
-
-main p{
-  text-indent: 5em;
+  color: #ffffff;
+  :where(main p){
+    text-indent: 5em;
+  }
 }
 
 h2 {
@@ -37,35 +33,48 @@ h2 {
   text-align: left;
   margin: 0;
   padding: 0px 50px;
-  color: #00539f;
-  text-shadow: 3px 3px 1px black;
+  color: #ffffff;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
 }
 
-header{
+:is(header, h1, nav, nav ul, nav li, nav li a){
     display: block;
     width: inherit;
-    border: 4px solid black;
-  }
-
-nav {
-    display: block;
-    width: inherit;
-  }
-    
-nav ul{
-    display: block;
-    padding: 0;
+    background-color: black;
+    color: #ffffff;
+    :where(header){
+      box-shadow: 0px 0px 50px white;
+      border-radius: 20px;
+    }
+    :where(h1){
+        font-size: 60px;
+        font-family: 'Playfair Display SC';
+        text-align: center;
+        margin: 0;
+        text-decoration: solid;
+        text-shadow: 2px 1px 2px rgb(255, 255, 255);
+    }
+    :where(nav ul){
+      padding: 10px;
+    }
+    :where(nav li){
+      display: inline-block;
+      font-size: 18px;
+      width: 150px;
+      text-shadow: 1px 1px 1px rgb(255, 255, 255);
+      text-align: center;
+    }
+    :where(nav li a){
+      text-decoration: none;
+    }
   }
   
-nav li{
-    display: inline-block;
-    font-size: 18px;
-    width: 150px;
-    color: #00539f;
-    text-shadow: 1px 1px 1px black;
-    text-align: center;
-}
-
-img {
-    border: 3px solid black;
+:is(footer, footer a) {
+   color: white;
+   :where(footer a) {
+      text-decoration: none;
+      text-shadow: 1px 1px white;
+      border: 1px solid white;
+      border-radius: 10px;
+    }
   }
