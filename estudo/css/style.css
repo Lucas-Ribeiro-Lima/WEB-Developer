@@ -6,35 +6,34 @@ html {
     /* background-position: repeat; */
     background-size: cover;
     line-height: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
     width: 650px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
     background-color: #000000;
     padding: 20px 20px 20px 20px;
     border-radius: 20px;
     box-shadow: 0px 0px 50px white;
   }
 
-:is(main, main p) {
+:is(main, main p, main h2) {
   margin: 0px 25px 25px 0px;
   text-align: justify;
   color: #ffffff;
   :where(main p){
     text-indent: 5em;
   }
-}
-
-h2 {
-  font-size: 48px;
-  text-align: left;
-  margin: 0;
-  padding: 0px 50px;
-  color: #ffffff;
-  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+  :where(h2){
+    font-size: 48px;
+    text-align: left;
+    margin: 0;
+    padding: 0px 50px;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px rgb(255, 255, 255);
+  }
 }
 
 :is(header, h1, nav, nav ul, nav li, nav li a){
@@ -42,27 +41,26 @@ h2 {
     width: inherit;
     background-color: black;
     color: #ffffff;
-    :where(header){
-      box-shadow: 0px 0px 50px white;
-      border-radius: 20px;
-    }
+    border-radius: 20px;
     :where(h1){
+        display: flex;
         font-size: 60px;
         font-family: 'Playfair Display SC';
-        text-align: center;
+        justify-content: center;
         margin: 0;
         text-decoration: solid;
         text-shadow: 2px 1px 2px rgb(255, 255, 255);
     }
-    :where(nav ul){
-      padding: 10px;
+    :where(nav ul){      
+      padding: 0px;     
     }
     :where(nav li){
       display: inline-block;
       font-size: 18px;
       width: 150px;
+      color: gray;
       text-shadow: 1px 1px 1px rgb(255, 255, 255);
-      text-align: center;
+      text-align: center; 
     }
     :where(nav li a){
       text-decoration: none;
