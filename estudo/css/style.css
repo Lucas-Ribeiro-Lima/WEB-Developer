@@ -19,6 +19,7 @@ body {
     box-shadow: 0px 0px 50px white;
   }
 
+/* Estilização do conteudo principal */
 :is(main, main p, main h2) {
   margin: 0px 25px 25px 0px;
   text-align: justify;
@@ -36,7 +37,8 @@ body {
   }
 }
 
-:is(header, h1, nav, nav ul, nav li, nav li a){
+/* Estilização da barra de navegação */
+:is(header, h1, nav, nav ul, nav li, nav li a, button){
     display: block;
     width: inherit;
     background-color: black;
@@ -66,12 +68,14 @@ body {
       text-decoration: none;
     }
   }
-  
+
+
+/* Estilização do rodapé */
 :is(footer, footer a) {
    color: white;
    :where(footer a) {
       text-decoration: none;
-      text-shadow: 1px 1px white;
+      text-shadow: 0px 0px white;
       border: 1px solid white;
       border-radius: 10px;
     }
