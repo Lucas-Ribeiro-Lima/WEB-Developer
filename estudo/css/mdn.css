@@ -162,3 +162,9 @@ button{
     margin: 0px 5px;
     font-size: 12px;
 }
+
+picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
