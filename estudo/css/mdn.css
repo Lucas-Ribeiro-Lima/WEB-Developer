@@ -20,6 +20,7 @@ body{
 
 .container {
     display: block;
+    height: fit-content;
 }
 
 .container-notices{
@@ -35,12 +36,14 @@ body{
 .container-header{
     display: flex;
     width: 95%;
+    height: max-content;
     justify-content: left;
-    align-items: center;
+    align-items: end;
     flex-direction: row;
     gap: 3em;
     margin-left: 2.5%;
     margin-right: 2.5%;
+    margin-bottom: 5px;
 }
 
 
@@ -65,7 +68,9 @@ body{
 .top-nav-menu ul{
     display: flex;
     gap: 2em;
-    padding: 0;
+    /* padding: 0; */
+    margin: 0px;
+    margin-top: 10px;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -94,6 +99,7 @@ body{
 }
 
 input{
+    max-width: 50px;
     border-radius: 20px;
     background-color: var(--color-black);
     border: var(--border-solid);
@@ -130,7 +136,7 @@ button{
 }
 
 .ai-beta {
-    background-color: rgb(240, 49, 106);
+    background-color: rgb(218, 92, 129);
     border-radius: 25px;
     color: var(--color-black);
     position: relative;
@@ -141,3 +147,18 @@ button{
     font-weight: var(--font-strong);
 }
 
+.top-actual-path{
+    display: flex;
+    height: 30px;
+    background-color: var(--color-gray);
+    border-top: var(--border-white);
+    border-bottom: var(--border-white);
+    align-items: center;
+}
+
+.actual-path{
+    color: var(--color-white);
+    font-family: var(--font-title);
+    margin: 0px 5px;
+    font-size: 12px;
+}
