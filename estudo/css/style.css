@@ -1,5 +1,5 @@
 :root, body{
-  --color-background: rgba(72, 72, 73, 0.651);
+  --color-background: rgba(72, 72, 73, 0.801);
   --color-text: white;
   --text-black: rgba(8, 8, 8, 0.959);
   --line-heigh: 2;
@@ -8,6 +8,10 @@
   --font-title: 'Playfair Display SC';
   --font-text: 'Roboto';
   --font-size-corp: 16px;
+  --font-size-title-mobile: 32px;
+  --font-size-body-mobile: 14px;
+  --transition-duration: 1000ms;
+  --satoru-blue-neon: rgba(39, 170, 231, 0.801);
 }
 
 body {
@@ -23,9 +27,13 @@ body {
 
 header{
   display: block;
+  position:sticky;
+  top: 0px;
+  overflow: hidden;
   width: 100%;
   color: var(--color-text);
   background-color: var(--color-background);
+  box-shadow: 1px 1px 10px var(--satoru-blue-neon);
 }
 
 header h1 {
@@ -37,6 +45,12 @@ header h1 {
   text-shadow: var(--text-ilumination);
 }
 
+header label{
+  position: absolute;
+  top: 22.5px;
+  right: 10px;
+}
+
 header nav{
   border-top: 0.5px inset white;
 }
@@ -46,7 +60,8 @@ header nav ul {
   margin: 0px;
   padding: 0px;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
+  gap: 15px;
 }
 
 header nav li {
@@ -61,13 +76,13 @@ header nav li a {
   text-decoration: none;
   color: var(--text-black);
   font-weight: var(--font-strong);
-  transition-duration: 1000ms;
+  transition-duration: var(--transition-duration);
 }
 
 nav li :hover {
   color: var(--color-text);
   text-shadow: var(--text-ilumination);
-  transition-duration: 1000ms;
+  transition-duration: var(--transition-duration);
 }
 
 main {
@@ -75,9 +90,11 @@ main {
   font-family: var(--font-text);
   text-align: justify;
   background-color: var(--color-background);
+  box-shadow: 1px 1px 10px var(--satoru-blue-neon);
   margin: 50px 25%;
   border-radius: 50px;
   padding: 25px 25px;
+  overflow: auto;
 }
 
 main p {
@@ -97,8 +114,10 @@ main h2 {
 footer {
   display: block;
   background-color: var(--color-background);
+  box-shadow: 1px 1px 10px var(--satoru-blue-neon);
   color: var(--color-text);
-  position: absolute;
+  overflow: hidden;
+  position: fixed;
   bottom: 0px;
   width: 100%;
   text-align: center;
@@ -110,17 +129,80 @@ footer a {
   border: 1px solid rgb(15, 15, 15);
   border-radius: 25px;
   padding: 3px 3px;
-  transition-duration: 1000ms;
+  transition-duration: var(--transition-duration);
   font-weight: var(--font-strong);
 }
 
 footer a:hover{
-  text-shadow: var(--text-ilumination);
-  box-shadow: var(--text-ilumination);
+  text-shadow: 1px 1px 10px var(--satoru-blue-neon);
+  box-shadow: 1px 1px 10px var(--satoru-blue-neon);
   background-color: black;
   padding: 5px 5px;
   border-radius: 50px;
-  border-color: white;
-  color: white;
-  transition-duration: 1000ms;
+  border-color: var(--satoru-blue-neon);
+  color: var(--satoru-blue-neon);
+  transition-duration: var(--transition-duration);
+}
+
+#menu-bar{
+  display: none;
+}
+
+header label {
+  display: none;
+  cursor: pointer;
+  float: right;
+}
+
+
+@media (max-width: 540px){
+
+  header label{
+    display: initial;
+  }
+  
+  .menu{
+    display: none;
+  }
+
+  header h1 {
+    font-size: var(--font-size-title-mobile);
+  }
+
+  header nav li {
+    font-size: var(--font-size-body-mobile);
+    width: 100%;
+    text-align: center;
+  }
+
+  main {
+    position: relative;
+    margin: 100px 25px 100%;
+  }
+
+  main p {
+    font-size: var(--font-size-body-mobile);   
+  }
+
+  main h2{
+    font-size: 24px;
+  }
+
+  footer{
+    font-size: var(--font-size-body-mobile);
+  }
+
+  footer a {
+    text-shadow: 1px 1px 15px var(--satoru-blue-neon);
+    box-shadow: 1px 1px 15px var(--satoru-blue-neon);
+    background-color: black;
+    padding: 5px 5px;
+    border-radius: 50px;
+    border-color: var(--satoru-blue-neon);
+    color: var(--satoru-blue-neon);
+  }
+
+  #menu-bar:checked ~ * .menu {
+    display: initial;
+  }
 }
