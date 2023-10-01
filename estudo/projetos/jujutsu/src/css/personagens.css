@@ -1,0 +1,80 @@
+.satoru.botao.selecionado img {
+    box-shadow: 0px 0px 30px var(--satoru-color);
+}
+
+.satoru .descricao {
+    text-shadow: 0px 0px 30px var(--satoru-color);
+}
+
+.satoru .nome-personagem{
+    text-shadow: 0px 0px 30px var(--satoru-color);
+}
+
+.satoru.botao img:hover{
+    box-shadow: 0px 0px 30px var(--satoru-color);
+    transition-duration: var(--duracao-transition);
+}
+
+
+.sukuna.botao.selecionado img {
+    box-shadow: 0px 0px 30px var(--sukuna-color);
+}
+
+.sukuna.botao img:hover{
+    box-shadow: 0px 0px 30px var(--sukuna-color);
+    transition-duration: var(--duracao-transition);
+}
+
+.sukuna .descricao {
+    text-shadow: 0px 0px 30px var(--sukuna-color);
+}
+
+.sukuna .nome-personagem{
+    text-shadow: 0px 0px 30px var(--sukuna-color);
+}
+
+.sukuna .conteudo {
+    top: 150px;
+    left: 350px;
+}
+
+
+.yuta.botao.selecionado img {
+    box-shadow: 0px 0px 30px var(--yuta-color);
+}
+
+.yuta .descricao {
+    text-shadow: 0px 0px 30px var(--yuta-color);
+}
+
+.yuta .nome-personagem{
+    text-shadow: 0px 0px 30px var(--yuta-color);
+}
+
+.yuta.botao img:hover{
+    box-shadow: 0px 0px 30px var(--yuta-color);
+    transition-duration: var(--duracao-transition);
+}
+
+
+.megumi.botao.selecionado img {
+    box-shadow: 0px 0px 30px var(--megumi-color);
+}
+
+.megumi .descricao {
+    text-shadow: 0px 0px 50px var(--megumi-color);
+}
+
+.megumi .nome-personagem{
+    text-shadow: 0px 0px 50px var(--megumi-color);
+}
+
+.megumi .conteudo {
+    top: 150px;
+    left: 350px;
+}
+
+.megumi.botao img:hover{
+    box-shadow: 0px 0px 30px var(--megumi-color);
+    transition-duration: 1000ms;
+}
