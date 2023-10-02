@@ -1,3 +1,5 @@
+/* Satoru */
+
 .satoru.botao.selecionado img {
     box-shadow: 0px 0px 30px var(--satoru-color);
 }
@@ -6,7 +8,7 @@
     text-shadow: 0px 0px 30px var(--satoru-color);
 }
 
-.satoru .nome-personagem{
+.satoru .titulo{
     text-shadow: 0px 0px 30px var(--satoru-color);
 }
 
@@ -15,6 +17,7 @@
     transition-duration: var(--duracao-transition);
 }
 
+/* Sukuna */
 
 .sukuna.botao.selecionado img {
     box-shadow: 0px 0px 30px var(--sukuna-color);
@@ -25,19 +28,23 @@
     transition-duration: var(--duracao-transition);
 }
 
+.sukuna .imagem{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
 .sukuna .descricao {
     text-shadow: 0px 0px 30px var(--sukuna-color);
 }
 
-.sukuna .nome-personagem{
+.sukuna .titulo{
     text-shadow: 0px 0px 30px var(--sukuna-color);
 }
 
-.sukuna .conteudo {
-    top: 150px;
-    left: 350px;
-}
 
+/* Yuta */
 
 .yuta.botao.selecionado img {
     box-shadow: 0px 0px 30px var(--yuta-color);
@@ -47,8 +54,15 @@
     text-shadow: 0px 0px 30px var(--yuta-color);
 }
 
-.yuta .nome-personagem{
+.yuta .titulo{
     text-shadow: 0px 0px 30px var(--yuta-color);
+}
+
+.yuta .imagem{
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 .yuta.botao img:hover{
@@ -56,6 +70,13 @@
     transition-duration: var(--duracao-transition);
 }
 
+
+/* Megumi */
+
+.megumi.botao img:hover{
+    box-shadow: 0px 0px 30px var(--megumi-color);
+    transition-duration: 1000ms;
+}
 
 .megumi.botao.selecionado img {
     box-shadow: 0px 0px 30px var(--megumi-color);
@@ -65,16 +86,71 @@
     text-shadow: 0px 0px 50px var(--megumi-color);
 }
 
-.megumi .nome-personagem{
+.megumi .imagem {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    object-position: top left;
+}
+
+.megumi .titulo{
     text-shadow: 0px 0px 50px var(--megumi-color);
 }
 
-.megumi .conteudo {
-    top: 150px;
-    left: 350px;
+
+/* Itadori */
+
+.itadori.botao img:hover{
+    box-shadow: 0px 0px 30px var(--itadori-color);
+    transition-duration: 1000ms;
 }
 
-.megumi.botao img:hover{
-    box-shadow: 0px 0px 30px var(--megumi-color);
+.itadori.botao.selecionado img {
+    box-shadow: 0px 0px 30px var(--itadori-color);
+}
+
+.itadori .descricao {
+    text-shadow: 0px 0px 50px var(--itadori-color);
+}
+
+.itadori .titulo{
+    text-shadow: 0px 0px 50px var(--itadori-color);
+}
+
+.itadori.botao img:hover{
+    box-shadow: 0px 0px 30px var(--itadori-color);
+    transition-duration: 1000ms;
+}
+
+
+/* Nobara */
+
+.nobara.botao img:hover{
+    box-shadow: 0px 0px 30px var(--nobara-color);
+    transition-duration: 1000ms;
+}
+
+.nobara.botao.selecionado img {
+    box-shadow: 0px 0px 30px var(--nobara-color);
+}
+
+.nobara .descricao {
+    text-shadow: 0px 0px 50px var(--nobara-color);
+}
+
+.nobara .imagem {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.nobara .titulo{
+    text-shadow: 0px 0px 50px var(--nobara-color);
+}
+
+.nobara.botao img:hover{
+    box-shadow: 0px 0px 30px var(--nobara-color);
     transition-duration: 1000ms;
 }
