@@ -34,6 +34,7 @@ header{
   color: var(--color-text);
   background-color: var(--color-background);
   box-shadow: 1px 1px 10px var(--satoru-blue-neon);
+  z-index: 1;
 }
 
 header h1 {
@@ -163,6 +164,25 @@ main ul li a {
 }
 
 
+#sobre-mim{
+  display: flex;
+  flex-direction: row;
+  margin:25px;
+  text-align: justify;
+}
+
+.foto-pessoal{
+  object-fit: cover;
+  width: 200px;
+  height: 300px;
+  position: relative;
+  left: -20px;
+  margin: 0px;
+  padding: 0px;
+  box-shadow: 1px 1px 10px var(--satoru-blue-neon);
+}
+
+
 @media (max-width: 540px){
 
   header label{
@@ -192,13 +212,14 @@ main ul li a {
     margin: 100px 25px 100%;
   }
 
+  main h2{
+      font-size: 26px;
+  }
+
   main p {
     font-size: var(--font-size-body-mobile);   
   }
 
-  main h2{
-    font-size: 24px;
-  }
 
   footer{
     font-size: var(--font-size-body-mobile);
@@ -218,4 +239,16 @@ main ul li a {
     display: initial;
   }
 
+  #sobre-mim{
+      display: flex;
+      flex-direction: column;
+      margin:25px;
+      text-align: justify;
+      align-items: center;
+    }
+    
+  .foto-pessoal{
+      width: 150px;
+      height: 200px;
+  }
 }
