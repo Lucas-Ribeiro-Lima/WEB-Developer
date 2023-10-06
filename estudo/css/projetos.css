@@ -1,0 +1,16 @@
+.projetos li{
+    list-style: none;
+}
+
+.projetos a{
+    text-decoration: none;
+    color: var(--text-black);
+    font-weight: var(--font-strong);
+    transition-duration: var(--transition-duration);
+}
+
+.projetos a:hover{
+    color: white;
+    text-shadow: var(--text-ilumination);
+    transition-duration: var(--transition-duration);
+}

@@ -51,7 +51,7 @@ header label{
   right: 10px;
 }
 
-header nav{
+header nav ul{
   border-top: 0.5px inset white;
 }
 
@@ -65,7 +65,7 @@ header nav ul {
 }
 
 header nav li {
-  display: inline-block;
+  list-style-type: none;
   font-size: 22px;
   width: 150px;
   color: var(--text-black);
@@ -155,18 +155,30 @@ header label {
 }
 
 
+main ul li a {
+  text-decoration: none;
+  color: var(--color-text);
+  text-shadow: var(--text-ilumination);
+  transition-duration: var(--transition-duration);
+}
+
+
 @media (max-width: 540px){
 
   header label{
     display: initial;
   }
-  
-  .menu{
+
+  .menu {
     display: none;
   }
 
   header h1 {
     font-size: var(--font-size-title-mobile);
+  }
+
+  header nav ul {
+    display: block;
   }
 
   header nav li {
@@ -202,7 +214,8 @@ header label {
     color: var(--satoru-blue-neon);
   }
 
-  #menu-bar:checked ~ * .menu {
+  #menu-bar:checked ~ .menu {
     display: initial;
   }
+
 }
