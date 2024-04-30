@@ -1,3 +1,24 @@
-# **HTML - CSS - JAVASCRIPT - APACHE - PHP - DOCKER**
+# **HTML - CSS - JavaScript - Apache - PHP - Docker**
 
-This is a project where i going to develop a web site for study
+## Technologies
+
+- 💻 HTML
+- 🎨 CSS
+- 🚀 JavaScript
+- 🐳 Docker
+
+## Illustrations
+
+### Home Page
+
+![Homepage](./imagens/home-page.png)
+
+### Projects
+
+**Jujutsu Kaisen Site**
+![Satoru](./imagens/jujutsu-kaisen-project-satoru.png)
+![Sukuna](./imagens/jujutsu-kaisen-project-sukuna.png)
+
+Access at [https://lucasrl.duckdns.org/](https://lucasrl.duckdns.org/)
+
+This is a project where I am developing a website.
