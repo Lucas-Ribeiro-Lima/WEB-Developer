@@ -1,0 +1,125 @@
+:root {
+  --primary-color: rgb(0, 19, 27);
+  --primary-color-dark: rgba(17, 87, 119, 0.959);
+  --primary-color-lighter: rgb(25, 97, 131);
+  --secondary-color: rgb(197, 203, 209);
+  --secondary-color-darker: rgb(158, 160, 161);
+  --special-color: rgba(67, 182, 235, 0.952);
+  --error-color: red;
+}
+
+* {
+  outline: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  width: 640px;
+  padding: 24px;
+  gap: 8px;
+  background-color: var(--secondary-color);
+  box-shadow: 0px 0px 6px white;
+}
+
+.title {
+  align-self: center;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.table-imc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  line-height: 36px;
+}
+
+.table-column div {
+  border: 2px solid black;
+  padding: 8px;
+  background-color: var(--secondary-color-darker);
+}
+
+.table-column .table-title {
+  font-weight: 700;
+  background-color: var(--primary-color-lighter);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 8px;
+  label {
+    font-weight: 700;
+    align-self: flex-start;
+  }
+  button {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    width: 30%;
+    height: 48px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    margin-top: 20px;
+  }
+  button:hover {
+    border: 1px solid black;
+    background-color: var(--primary-color-dark);
+  }
+  input {
+    font-size: 22px;
+    text-indent: 2rem;
+    width: 100%;
+    height: 44px;
+    border: none;
+    align-self: flex-start;
+  }
+  input.error {
+    outline: 1px solid var(--error-color);
+  }
+  input:focus {
+    outline: 1px solid var(--primary-color);
+  }
+}
+
+.resultado {
+  display: none;
+  background-color: var(--special-color);
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  width: 80%;
+  padding: 4px;
+  margin: 8px;
+  border-radius: 8px;
+}
+
+.error {
+  display: none;
+  align-self: flex-start;
+  color: var(--error-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.resultado.ativo,
+.error.ativo {
+  display: flex;
+}
