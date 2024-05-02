@@ -1,3 +1,15 @@
+!function handleSubmit() {
+  const form = document.querySelector('.formulario')
+  form.addEventListener('submit', (event) => {
+    event.preventDefault()
+
+    const peso = Number(event.target.peso.value)
+    const altura = Number(event.target.altura.value.replace(',', '.'))
+
+    formControl(peso, altura)
+  })
+}()
+
 /**
  * Calculate the IMC based on peso and altura
  * @param {Number} peso 
@@ -6,34 +18,32 @@
  */
 function calculaIMC(peso, altura){
   const imc = peso / (Math.pow(altura, 2))
-  const string = `IMC: ${imc.toFixed(1)}`
-
-  let resultado
+  const imcStr = `IMC: ${imc.toFixed(2)}`
+  const nivel = getNivelIMC(imc)
 
   if (Number.isNaN(imc) || imc === undefined || imc === Infinity){
     return resultado = `Valores inválidos`
   }
 
-  if (imc > 0 && imc < 18.5) {
-    resultado = `${string} Status: (Abaixo do peso)`
-  } 
-  else if (imc >= 18.5 && imc < 25) {
-    resultado = `${string} Status: (Peso normal)`
-  }
-  else if (imc >= 25 && imc < 30) {
-    resultado = `${string} Status: (Sobrepeso)`
-  }
-  else if (imc >= 30 && imc < 35) {
-    resultado = `${string} Status: (Obesidade grau 1)`
-  }
-  else if (imc >= 35 && imc < 40) {
-    resultado = `${string} Status: (Obesidade grau 2)`
-  }
-  else if (imc >= 40) {
-    resultado = `${string} Status: (Obesidade grau 3)`
-  }
+  const resultado = `${imcStr} ${nivel}`
 
   return resultado
+}
+
+function getNivelIMC(imc) {
+  const nivel = ['Abaixo do peso', 'Peso normal', 'Sobrepeso', 'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 3']
+
+  if (imc > 40) return string = nivel[5]
+  
+  if (imc >= 35) return string = nivel[4]
+
+  if (imc >= 30) return string = nivel[3]
+
+  if (imc >= 25) return string = nivel[2]
+
+  if (imc >= 18.5) return string = nivel[1]
+
+  if (imc < 18.5) return string = nivel[0]
 }
 
 /**
@@ -86,14 +96,3 @@ function formControl(peso, altura) {
   }
 }
 
-!function handleSubmit() {
-  const form = document.querySelector('.formulario')
-  form.addEventListener('submit', (event) => {
-    event.preventDefault()
-
-    const peso = Number(event.target.peso.value)
-    const altura = Number(event.target.altura.value.replace(',', '.'))
-
-    formControl(peso, altura)
-  })
-}()
