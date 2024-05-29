@@ -1,0 +1,16 @@
+version: "3.0"
+services:
+  site-legado:
+    image: site-legado:latest
+    container_name: site_legado
+    ports:
+      - 7777:80
+    networks:
+      - network
+    volumes:
+      - ./estudo/:/usr/local/apache2/htdocs/public-html/
+    restart: unless-stopped
+  
+networks:
+  network:
+      driver: bridge
