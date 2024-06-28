@@ -36,9 +36,3 @@ button {
     font-size: 12px;
     cursor: pointer;
 }
-
-.aceite {
-    display: flex;
-    flex-direction: row;
-    gap: 8px
-}
