@@ -123,3 +123,35 @@ body {
 .error.ativo {
   display: flex;
 }
+
+/* Responsive */
+@media (max-width: 720px) {
+  body {
+    font-size: 16px;
+    margin: 0px;
+  }
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .table-imc {
+    line-height: 18px;
+  }
+
+  .formulario {
+    button {
+      font-size: 16px;
+    }
+    input {
+      height: 22px;
+    }
+  }
+  .error {
+    font-size: 12px;
+  }
+}
